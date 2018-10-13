@@ -12,4 +12,7 @@ test('returns 1 + 2', () => {
 test('returns 1 + 2 + 3 + 4', () => {
     expect(add("1,2,3,4")).toBe(10);
   });
-  
+  test('returns 1 + 2 + 3 + 4 but 4 is in a new line', () => {
+    expect(add("1,2,3\n4")).toBe(10);
+  });
+

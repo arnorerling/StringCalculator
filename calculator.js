@@ -1,5 +1,5 @@
 function add(a) {
-    var res = a.split(',');
+    var res = a.split(new RegExp ([',|\\n']));
     var sum = 0;
     if(a != ""){
         for(var i = 0; i < res.length; i++){
