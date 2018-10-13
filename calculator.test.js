@@ -6,4 +6,7 @@ test('returns 0', () => {
 test('returns the string or 1', () => {
     expect(add("1")).toBe(1);
   });
+test('returns 1 + 2', () => {
+    expect(add("1,2")).toBe(3);
+  });
 
