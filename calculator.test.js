@@ -39,4 +39,12 @@ test('returns 1 + 2 + 3 + 4', () => {
   test('test adds 1000 + 2, returns 1002', () => {
     expect(add("1000,2")).toBe(1002);
   });
-  
+  test('returns 1 + 2 + 3 + 4 + 5 with ; as an extra delimiter', () => {
+    expect(add("//;\n1;2;3\n4,5")).toBe(15);
+  });
+  test('returns 1 + 2 + 3 + 4 + 5 with % as an extra delimiter', () => {
+    expect(add("//%\n1%2%3\n4,5")).toBe(15);
+  })
+  test('returns 1 + 2 + 3 + 4 + 5 with emil as an extra delimiter', () => {
+    expect(add("//emil\n1,2emil3\n4,5")).toBe(15);
+  });
