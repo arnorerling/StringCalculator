@@ -1,11 +1,11 @@
 function add(a) {
-var res = a.split(',');
-    if(a == ""){
-        return 0;   
-    } else if (res.length == 1){
-        return parseInt(a);
-    } else if (res.length == 2){
-        return parseInt(res[0]) + parseInt(res[1]);
+    var res = a.split(',');
+    var sum = 0;
+    if(a != ""){
+        for(var i = 0; i < res.length; i++){
+            sum += parseInt(res[i]);
+        }  
     } 
+    return sum;
   }
   module.exports = add; 
