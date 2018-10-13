@@ -7,7 +7,9 @@ function add(a) {
             if(parseInt(res[i]) < 0){
                 negatives.push(res[i]);
             }
-            sum += parseInt(res[i]);
+            if(parseInt(res[i]) <= 1000) {
+                sum += parseInt(res[i]);
+            }
         }  
     } 
     if(negatives.length > 0){

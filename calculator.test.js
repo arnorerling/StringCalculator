@@ -30,4 +30,13 @@ test('returns 1 + 2 + 3 + 4', () => {
     expect(testNeg).toThrowError('Negatives not allowed:-1');
     
   });
-
+  test('test tries adding 1001 + 2, returns 2', () => {
+    expect(add("1001,2")).toBe(2);
+  });
+  test('test tries adding 1001 + 2000, returns 0', () => {
+    expect(add("1001,2000")).toBe(0);
+  });
+  test('test adds 1000 + 2, returns 1002', () => {
+    expect(add("1000,2")).toBe(1002);
+  });
+  
